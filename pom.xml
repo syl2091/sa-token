@@ -9,5 +9,9 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>sa-token-demo-case</module>
+    </modules>
+
 
 </project>
