@@ -1,11 +1,10 @@
 # Compiled class file
 *.class
-
 # Eclipse
 .project
 .classpath
 .settings/
-
+.idea/*
 # Intellij
 *.ipr
 *.iml
