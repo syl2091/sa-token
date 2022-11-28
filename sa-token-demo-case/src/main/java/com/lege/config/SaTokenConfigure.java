@@ -6,6 +6,7 @@ import cn.dev33.satoken.interceptor.SaInterceptor;
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.strategy.SaStrategy;
+import cn.dev33.satoken.util.SaFoxUtil;
 import cn.dev33.satoken.util.SaResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -113,10 +114,11 @@ public class SaTokenConfigure implements WebMvcConfigurer {
      */
     @Autowired
     public void rewriteSaStrategy() {
-        // 重写Sa-Token的注解处理器，增加注解合并功能
-        SaStrategy.me.getAnnotation = (element, annotationClass) -> {
-            return AnnotatedElementUtils.getMergedAnnotation(element, annotationClass);
+        // 重写 Token 生成策略
+        SaStrategy.me.createToken = (loginId, loginType) -> {
+            return SaFoxUtil.getRandomString(60);    // 随机60位长度字符串
         };
     }
+
 
 }
