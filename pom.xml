@@ -11,6 +11,7 @@
 
     <modules>
         <module>sa-token-demo-case</module>
+        <module>sa-token-alone-redis</module>
     </modules>
 
 

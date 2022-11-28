@@ -12,6 +12,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sa-token-demo-case/pom.xml" />
+        <option value="$PROJECT_DIR$/sa-token-alone-redis/pom.xml" />
       </list>
     </option>
   </component>
